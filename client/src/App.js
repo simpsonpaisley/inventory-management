@@ -8,13 +8,6 @@ import LogIn from './pages/LogIn';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function App() {
-	const [products, setProducts] = useState([]);
-
-	async function getProducts() {
-		const API = 'http://localhost:1995/products';
-		const results = await axios.get(API);
-		setProducts(results.data);
-	}
 	return (
 		<BrowserRouter>
 			<Routes>

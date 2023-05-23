@@ -1,5 +1,3 @@
-import background from '../images/background.svg';
-
 function SignIn() {
 	return (
 		<div className="signIn">
