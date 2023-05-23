@@ -1,6 +1,11 @@
 import './App.css';
 import axios from 'axios';
 import { useState } from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+import LogIn from './pages/LogIn';
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function App() {
 	const [products, setProducts] = useState([]);
@@ -11,13 +16,17 @@ function App() {
 		setProducts(results.data);
 	}
 	return (
-		<div className="App">
-			<button onClick={getProducts}>Get Products</button>
-			{products.map((product) => (
-				<h2>{product.name}</h2>
-			))}
-		</div>
+		<BrowserRouter>
+			<Routes>
+				<Route
+					path="/"
+					element={<LandingPage />}></Route>
+				<Route
+					path="/login"
+					element={<LogIn />}></Route>
+			</Routes>
+		</BrowserRouter>
 	);
 }
-
+root.render(App);
 export default App;
