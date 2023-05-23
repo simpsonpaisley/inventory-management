@@ -4,11 +4,11 @@ function Header() {
 			<div className="logo">
 				<img src={require('../images/Logo.png')}></img>
 				<h1 className="logoText">
-					<a href="http://localhost:3000">STOCKWISE</a>
+					<a href="/">STOCKWISE</a>
 				</h1>
 			</div>
 			<button className="logIn">
-				<a href="http://localhost:3000/login">LOG IN</a>
+				<a href="/login">LOG IN</a>
 			</button>
 		</div>
 	);
