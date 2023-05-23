@@ -44,7 +44,7 @@ function LandingMain() {
 					<div className="featureBox">
 						<img
 							src={cardInfo[showCard].imgSrc}
-							alt=""></img>
+							alt={cardInfo[showCard].title}></img>
 						<h3>{cardInfo[showCard].title}</h3>
 						<p>{cardInfo[showCard].paragraph}</p>
 					</div>

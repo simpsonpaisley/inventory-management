@@ -1,23 +1,25 @@
 import './App.css';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import LandingPage from './pages/LandingPage';
 import LogIn from './pages/LogIn';
-const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function App() {
 	return (
-		<BrowserRouter>
+		<div>
 			<Routes>
 				<Route
 					path="/"
-					element={<LandingPage />}></Route>
+					element={<LandingPage />}
+				/>
 				<Route
 					path="/login"
-					element={<LogIn />}></Route>
+					element={<LogIn />}
+				/>
 			</Routes>
-		</BrowserRouter>
+		</div>
 	);
 }
-root.render(App);
+
 export default App;
