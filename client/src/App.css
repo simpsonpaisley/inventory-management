@@ -1,0 +1,145 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.header {
+	box-sizing: border-box;
+	width: 100%;
+	height: 18vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+	background-color: #e9ecef;
+	border-bottom: 2px solid #343a40;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo img {
+	margin-right: 1rem;
+}
+
+.logoText a {
+	font-family: 'Oswald', sans-serif;
+	font-size: 3rem;
+	color: #007bff;
+	text-decoration: none;
+}
+
+.logIn {
+	margin-right: 1rem;
+	width: 10rem;
+	height: 4rem;
+	background-image: linear-gradient(to right, #007bff, #14daff);
+	border: none;
+	border-radius: 5px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 2rem;
+	box-shadow: 2px 2px 2px #343a40;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in;
+}
+
+.logIn:hover {
+	box-shadow: none;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in;
+}
+
+.logIn a {
+	text-decoration: none;
+	color: #e9ecef;
+}
+
+.landingMain {
+	min-height: 80vh;
+	height: auto;
+	width: 100%;
+	background-image: url('./images/background.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	padding-bottom: 2rem;
+}
+
+.landingMain h2 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 2rem;
+	text-align: center;
+	color: #343a40;
+}
+
+.featureBox {
+	background-color: #ffffff;
+	width: 40vw;
+	min-height: 40vh;
+	border: 2px solid #343a40;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 1rem;
+	border-radius: 5px;
+	padding: 1rem;
+	box-shadow: 2px 2px 3px #343a40;
+	margin-top: 3rem;
+	margin-left: 3rem;
+}
+
+.featureBox img {
+	width: 150px;
+}
+
+.featureBox h3 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 2rem;
+}
+
+.featureBox p {
+	font-family: 'Roboto', sans-serif;
+}
+
+#stack {
+	width: 600px;
+	margin-top: 2rem;
+}
+
+.midSection {
+	min-height: 70vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.landingText {
+	background-color: #ffffff;
+	width: 90vw;
+	min-height: 40vh;
+	border: 2px solid #343a40;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 1rem;
+	border-radius: 5px;
+	padding: 1rem;
+	box-shadow: 2px 2px 3px #343a40;
+	margin-top: 3rem;
+	margin-left: 3rem;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5rem;
+}
+
+.footer {
+	background-color: #e9ecef;
+	height: 18vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-top: 2px solid #343a40;
+}
