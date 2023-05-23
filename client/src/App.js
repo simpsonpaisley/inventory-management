@@ -1,6 +1,4 @@
 import './App.css';
-import axios from 'axios';
-import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
