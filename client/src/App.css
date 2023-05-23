@@ -3,6 +3,8 @@
 	box-sizing: border-box;
 }
 
+/** Reusable Components CSS **/
+
 .header {
 	box-sizing: border-box;
 	width: 100%;
@@ -13,6 +15,15 @@
 	padding: 1rem;
 	background-color: #e9ecef;
 	border-bottom: 2px solid #343a40;
+}
+
+.footer {
+	background-color: #e9ecef;
+	height: 18vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-top: 2px solid #343a40;
 }
 
 .logo {
@@ -55,6 +66,8 @@
 	text-decoration: none;
 	color: #e9ecef;
 }
+
+/** Landing Page CSS **/
 
 .landingMain {
 	min-height: 80vh;
@@ -135,11 +148,51 @@
 	font-size: 1.5rem;
 }
 
-.footer {
-	background-color: #e9ecef;
-	height: 18vh;
+/** Log In Page CSS **/
+
+.signIn {
+	background-image: url(./images/background.svg);
+	background-size: 100%;
+	min-height: 80vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border-top: 2px solid #343a40;
+}
+
+.signInForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #ffffff;
+	height: 75vh;
+	width: 30vw;
+	border: 2px solid #343a40;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px #343a40;
+}
+
+.signInForm form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 100%;
+}
+
+.signInForm h2 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 3rem;
+	color: #007bff;
+}
+
+.signInForm input {
+	width: 25vw;
+	height: 3rem;
+	background-color: #e9ecef;
+	border-radius: 5px;
+	text-align: center;
+	margin: 1rem;
+	font-size: 1.5rem;
+	font-family: 'Roboto', sans-serif;
 }
