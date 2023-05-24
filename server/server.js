@@ -19,11 +19,9 @@ app.get('/', (request, response) => {
 
 // Get All Products
 
-app.get('/products', async (request, response) => {
-	const products = await Product.find({});
-	response.json(products);
+app.get('/users', (request, response) => {
+	response.json('This Endpoint is working');
 });
-
 // Connection
 
 app.listen(PORT, () => {

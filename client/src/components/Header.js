@@ -1,3 +1,5 @@
+import HeaderButton from './HeaderButton';
+
 function Header() {
 	return (
 		<div className="header">
@@ -7,9 +9,7 @@ function Header() {
 					<a href="/">STOCKWISE</a>
 				</h1>
 			</div>
-			<button className="logIn">
-				<a href="/login">LOG IN</a>
-			</button>
+			<HeaderButton />
 		</div>
 	);
 }
