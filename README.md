@@ -13,3 +13,5 @@ This is an inventory management system for keeping track of stock levels.
 **23/05/2023 - 18:04** - Added Landing Page.
 
 **24/05/2023 - 18:26** - Added Login functionality using Auth0.
+
+**24/05/2023 - 20:14** - Added Dropdown menu and base dashboard page.
