@@ -1,6 +1,9 @@
+/** Reusable CSS **/
 * {
 	margin: 0;
 	box-sizing: border-box;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
 }
 
 .header {
@@ -51,6 +54,15 @@
 	transition-timing-function: ease-in;
 }
 
+.logOutButton {
+	background-color: #e9ecef;
+	border: none;
+	color: #007bff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
 .headerProfileDisplay {
 	display: flex;
 	justify-content: center;
@@ -58,6 +70,8 @@
 	gap: 10px;
 	font-family: 'Roboto', sans-serif;
 	color: #343a40;
+	flex-grow: 1;
+	height: 18vh;
 }
 
 .headerProfileDisplay img {
@@ -66,13 +80,34 @@
 	border-radius: 50%;
 }
 
-.logOutButton {
+.profileDropDown {
+	height: 10rem;
 	background-color: #e9ecef;
-	border: none;
-	color: #007bff;
-	font-family: 'Roboto', sans-serif;
-	font-size: 1rem;
+	border: 2px solid #343a40;
+	border-top: none;
+	border-radius: 5px;
+	border-top-left-radius: 0%;
+	border-top-right-radius: 0%;
+	box-shadow: 2px 2px 2px #343a40;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 200px;
+	position: absolute;
+}
+
+.profileDropDown div {
+	border-bottom: 2px solid #343a40;
+	padding: 20px;
+	width: 200px;
+	height: 100%;
+	text-align: center;
 	cursor: pointer;
+}
+
+.dropDownPara {
+	text-decoration: none;
 }
 
 .headerAccount {
@@ -174,4 +209,68 @@
 	align-items: center;
 	justify-content: center;
 	border-top: 2px solid #343a40;
+}
+
+/** DASHBOARD CSS **/
+
+.dashboard {
+	min-height: 80vh;
+	height: auto;
+	width: 100%;
+	background-image: url('./images/background.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	padding-bottom: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.quickActions {
+	min-height: 30vh;
+	width: 98%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	background-color: #ffffff;
+	border: 2px solid #343a40;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px #343a40;
+	margin-top: 3rem;
+}
+
+.quickActions h2 {
+	font-family: 'Oswald', sans-serif;
+	color: #007bff;
+	font-size: 3rem;
+}
+
+.quickActionsButtonDisplay {
+	width: 90%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.quickActionButton {
+	background-image: linear-gradient(to right, #007bff, #14daff);
+	border: none;
+	border-radius: 5px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 2rem;
+	box-shadow: 2px 2px 2px #343a40;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in;
+	color: #343a40;
+	padding: 0.5rem;
+}
+
+.quickActionButton:hover {
+	box-shadow: none;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in;
 }
