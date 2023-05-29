@@ -11,36 +11,51 @@ async function seed() {
 	await Product.create({
 		name: '3M Fine Line Tape 6mm',
 		sku: 'fine-line-6mm',
-		manufacturerID: 1001,
-		cost: 3.51,
-		supplierIDs: [2001, 2002],
+		manufacturer: '3M',
+		costHistory: [
+			{ supplier: 'morelli', date: '2023-05-26', cost: 1.65 },
+			{
+				supplier: 'viking industrial',
+				date: '2023 - 04 - 26',
+				cost: 1.75,
+			},
+		],
+		suppliers: ['morelli', 'viking industrial'],
 		count: 50,
 		barcode: '123456789123456',
 		category: 'Tapes',
+		userID: 'auth0|646d1ad0ed7e9d013a3e7ed5',
 	});
 	await Product.create({
 		name: 'Mirror Adhesive',
 		sku: 'mirror-adhesive',
-		manufacturerID: 1002,
-		cost: 5.67,
-		supplierIDs: [2002],
+		manufacturer: 'wurth',
+		costHistory: [
+			{
+				supplier: 'viking industrial',
+				date: '2023 - 05 - 26',
+				cost: 3.58,
+			},
+		],
+		suppliers: ['viking industrial'],
 		count: 45,
 		barcode: '234567891234567',
 		category: 'Adhesives',
+		userID: 'auth0|646d1ad0ed7e9d013a3e7ed5',
 	});
 
 	await Manufacturer.create({
 		name: '3M',
 		website: 'https://3m.co.uk',
 		contacts: [{ name: 'Tom', email: 'tom@domain.com' }],
-		manufacturerID: 1001,
+		userID: 'auth0|646d1ad0ed7e9d013a3e7ed5',
 	});
 
 	await Manufacturer.create({
 		name: 'Wurth',
 		website: 'https://eshop.wurth.co.uk/en/GB/GBP/',
 		contacts: [{ name: 'Phil', email: 'phil@wurth.co.uk' }],
-		manufacturerID: 1002,
+		userID: 'auth0|646d1ad0ed7e9d013a3e7ed5',
 	});
 
 	await Supplier.create({
@@ -50,14 +65,14 @@ async function seed() {
 			{ name: 'Shaun', email: 'shaun@morelli.co.uk' },
 			{ name: 'Jason', email: 'jason@morelli.co.uk' },
 		],
-		supplierID: 2001,
+		userID: 'auth0|646d1ad0ed7e9d013a3e7ed5',
 	});
 
 	await Supplier.create({
 		name: 'Viking Industrial',
 		website: 'https://www.vikingtapes.co.uk/',
 		contacts: [{ name: 'Gavin', email: 'gavin@vikingtapes.co.uk' }],
-		supplierID: 2002,
+		userID: 'auth0|646d1ad0ed7e9d013a3e7ed5',
 	});
 
 	console.log('Products Created');

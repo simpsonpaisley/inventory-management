@@ -4,12 +4,13 @@ const { Schema } = mongoose;
 const productSchema = new Schema({
 	name: String,
 	sku: String,
-	manufacturerID: String,
-	cost: Number,
-	supplierIDs: Array,
+	manufacturer: String,
+	costHistory: Array,
+	suppliers: Array,
 	count: Number,
 	barcode: String,
 	category: String,
+	userID: String,
 });
 
 const product = mongoose.model('Product', productSchema);

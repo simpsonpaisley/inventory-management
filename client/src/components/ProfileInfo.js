@@ -19,7 +19,7 @@ function ProfileInfo() {
 				<img
 					src={picture}
 					alt=""></img>
-				<p>{name}</p>
+				<p id="user">{name}</p>
 			</div>
 			{showDropDown && (
 				<ProfileDropDown

@@ -1,10 +1,65 @@
-<svg width="1440" height="561" viewBox="0 0 1440 561" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 311.667L36.4917 322.056C71.725 332.444 143.45 353.222 215.175 332.444C288.158 311.667 359.883 249.333 431.608 187C503.333 124.667 575.058 62.3333 646.783 83.1111C718.508 103.889 791.492 207.778 863.217 280.5C934.942 353.222 1006.67 394.778 1078.39 436.333C1150.12 477.889 1221.84 519.444 1294.82 446.722C1366.55 374 1438.27 187 1473.51 93.5L1510 0V561H1473.51C1438.27 561 1366.55 561 1294.82 561C1221.84 561 1150.12 561 1078.39 561C1006.67 561 934.942 561 863.217 561C791.492 561 718.508 561 646.783 561C575.058 561 503.333 561 431.608 561C359.883 561 288.158 561 215.175 561C143.45 561 71.725 561 36.4917 561H0V311.667Z" fill="url(#paint0_linear_1_4)"/>
-<defs>
-<linearGradient id="paint0_linear_1_4" x1="10.4861" y1="427" x2="1510" y2="423.151" gradientUnits="userSpaceOnUse">
-<stop stop-color="#007BFF"/>
-<stop offset="0.9999" stop-color="#12D0FF"/>
-<stop offset="1" stop-color="#14DAFF" stop-opacity="0"/>
-</linearGradient>
-</defs>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1440"
+   height="561"
+   viewBox="0 0 1440 561"
+   fill="none"
+   version="1.1"
+   id="svg13"
+   sodipodi:docname="background.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview15"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.79166667"
+     inkscape:cx="720"
+     inkscape:cy="281.05263"
+     inkscape:window-width="1280"
+     inkscape:window-height="650"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg13" />
+  <path
+     fill-rule="evenodd"
+     clip-rule="evenodd"
+     d="m 1510,311.667 -36.4917,10.389 C 1438.275,332.444 1366.55,353.222 1294.825,332.444 1221.842,311.667 1150.117,249.333 1078.392,187 1006.667,124.667 934.942,62.3333 863.217,83.1111 791.492,103.889 718.508,207.778 646.783,280.5 575.058,353.222 503.33,394.778 431.61,436.333 359.88,477.889 288.16,519.444 215.18,446.722 143.45,374 71.73,187 36.49,93.5 L 0,0 v 561 h 36.49 c 35.24,0 106.96,0 178.69,0 72.98,0 144.7,0 216.43,0 71.72,0 143.448,0 215.173,0 71.725,0 144.709,0 216.434,0 71.725,0 143.45,0 215.175,0 71.725,0 143.45,0 216.433,0 71.725,0 143.45,0 178.6833,0 H 1510 Z"
+     fill="url(#paint0_linear_1_4)"
+     id="path2"
+     style="fill:url(#paint0_linear_1_4)" />
+  <defs
+     id="defs11">
+    <linearGradient
+       id="paint0_linear_1_4"
+       x1="10.4861"
+       y1="427"
+       x2="1510"
+       y2="423.151"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-1,0,0,1,1510,0)">
+      <stop
+         stop-color="#007BFF"
+         id="stop4" />
+      <stop
+         offset="0.9999"
+         stop-color="#12D0FF"
+         id="stop6" />
+      <stop
+         offset="1"
+         stop-color="#14DAFF"
+         stop-opacity="0"
+         id="stop8" />
+    </linearGradient>
+  </defs>
 </svg>

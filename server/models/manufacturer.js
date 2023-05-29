@@ -5,7 +5,7 @@ const manufacturerSchema = new Schema({
 	name: String,
 	website: String,
 	contacts: Array,
-	manufacturerID: Number,
+	userID: String,
 });
 
 const manufacturer = mongoose.model('manufacturer', manufacturerSchema);
