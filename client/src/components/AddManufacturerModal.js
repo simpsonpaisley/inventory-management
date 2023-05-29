@@ -18,8 +18,8 @@ function AddManufacturerModal({ handleOpenAddManufacturerModal, userID }) {
 
 	async function handleSubmit(event) {
 		event.preventDefault();
-		const API = 'http://localhost:1995/manufacturers';
-
+		const API = process.env.REACT_APP_API + '/manufacturers';
+		console.log(API);
 		await axios.post(API, manufacturerInfo);
 
 		setManufacturerInfo({
