@@ -18,9 +18,10 @@ function QuickActions({ userID }) {
 
 	async function getUserInformation() {
 		const manufacturerAPI =
-			'http://localhost:1995/manufacturers?userID=' + userID;
+			process.env.REACT_APP_API + '/manufacturers?userID=' + userID;
 
-		const supplierAPI = 'http://localhost:1995/suppliers?userID=' + userID;
+		const supplierAPI =
+			process.env.REACT_APP_API + '/suppliers?userID=' + userID;
 
 		const manufacturerResponse = await axios.get(manufacturerAPI);
 		const suppliersResponse = await axios.get(supplierAPI);

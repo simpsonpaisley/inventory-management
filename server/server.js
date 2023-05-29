@@ -42,7 +42,7 @@ app.put('/products/:id', async function (request, response) {
 });
 
 app.get('/manufacturers', async function (request, response) {
-	const manufacturers = await Manufacturer.find({});
+	const manufacturers = await Manufacturer.find(request.query);
 	response.json(manufacturers);
 });
 

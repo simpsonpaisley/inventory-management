@@ -19,3 +19,5 @@ This is an inventory management system for keeping track of stock levels.
 **24/05/2023 - 21:42** - Added models for manufacturer and supplier. Updated seed, and made new endpoints for manufacturers and suppliers.
 
 **29/05/2023 - 19:43** - Added add products, manufacturers, and suppliers functionality. Added barcode scanner and inventory change functionalities.
+
+**29/05/2023 - 20:45** - Changed API addresses to environment variables.

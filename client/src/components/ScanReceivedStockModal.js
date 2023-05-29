@@ -9,7 +9,7 @@ function ScanReceivedStockModal({ handleOpenScanReceivedModal }) {
 	}
 	async function changeStock(event) {
 		event.preventDefault();
-		const API = 'http://localhost:1995/products?barcode=' + barcode;
+		const API = process.env.REACT_APP_API + '/products?barcode=' + barcode;
 		const response = await axios.get(API);
 		const productData = response.data[0];
 
@@ -21,7 +21,7 @@ function ScanReceivedStockModal({ handleOpenScanReceivedModal }) {
 		};
 
 		const updateProductAPI =
-			'http://localhost:1995/products/' + productData._id;
+			process.env.REACT_APP_API + '/products/' + productData._id;
 		await axios.put(updateProductAPI, updateProduct);
 
 		event.target.reset();

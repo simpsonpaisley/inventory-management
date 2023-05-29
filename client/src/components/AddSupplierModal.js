@@ -18,7 +18,7 @@ function AddSupplierModal({ handleOpenAddSupplierModal, userID }) {
 
 	async function handleSubmit(event) {
 		event.preventDefault();
-		const API = 'http://localhost:1995/suppliers';
+		const API = process.env.REACT_APP_API + '/suppliers';
 
 		await axios.post(API, supplierInfo);
 

@@ -24,7 +24,7 @@ function AddProductModal({
 	async function handleSubmit(event) {
 		event.preventDefault();
 		console.log(productInfo);
-		const API = 'http://localhost:1995/products';
+		const API = process.env.REACT_APP_API + '/products';
 		await axios.post(API, productInfo);
 		setProductInfo({
 			name: '',
