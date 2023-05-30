@@ -10,7 +10,7 @@ function Products({ userID }) {
 
 	useEffect(() => {
 		async function getProducts() {
-			const API = REACT_APP_API + '/products?userID=' + userID;
+			const API = process.env.REACT_APP_API + '/products?userID=' + userID;
 
 			const response = await axios.get(API);
 			setProducts(response.data);
