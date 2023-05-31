@@ -51,6 +51,15 @@ app.post('/manufacturers', async function (request, response) {
 	response.json(newManufacturer);
 });
 
+app.put('/manufacturers/:id', async function (request, response) {
+	const manufacturerID = request.params.id;
+	const updatedManufacturer = request.body;
+
+	await Manufacturer.findByIdAndUpdate(manufacturerID, updatedManufacturer);
+
+	response.json('Manufacturer Updated Successfully');
+});
+
 app.get('/suppliers', async function (request, response) {
 	const suppliers = await Supplier.find(request.query);
 	response.json(suppliers);
@@ -59,6 +68,15 @@ app.get('/suppliers', async function (request, response) {
 app.post('/suppliers', async function (request, response) {
 	const newSupplier = await Supplier.create(request.body);
 	response.json(newSupplier);
+});
+
+app.put('/suppliers/:id', async function (request, response) {
+	const supplierID = request.params.id;
+	const updatedSupplier = request.body;
+
+	await Supplier.findByIdAndUpdate(supplierID, updatedSupplier);
+
+	response.json('Supplier Updated Successfully');
 });
 
 app.listen(PORT, () => {

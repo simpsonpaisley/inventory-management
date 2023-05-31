@@ -7,13 +7,27 @@ function AddSupplierModal({ handleOpenAddSupplierModal, userID }) {
 		website: '',
 		contacts: [],
 		userID: userID,
+		supplierRef: '',
 	});
+	function formatSupplierRef(name) {
+		return name.replace(/\s/g, '').toLowerCase();
+	}
 
 	function handleChange(event) {
-		setSupplierInfo({
-			...supplierInfo,
-			[event.target.name]: event.target.value,
-		});
+		const value = event.target.value;
+
+		if (event.target.name === 'name') {
+			setSupplierInfo({
+				...supplierInfo,
+				[event.target.name]: value,
+				supplierRef: formatSupplierRef(value),
+			});
+		} else {
+			setSupplierInfo({
+				...supplierInfo,
+				[event.target.name]: value,
+			});
+		}
 	}
 
 	async function handleSubmit(event) {
@@ -27,6 +41,7 @@ function AddSupplierModal({ handleOpenAddSupplierModal, userID }) {
 			website: '',
 			contacts: [],
 			userID: userID,
+			supplierRef: '',
 		});
 
 		event.target.reset();

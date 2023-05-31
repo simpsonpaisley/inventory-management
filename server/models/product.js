@@ -11,6 +11,10 @@ const productSchema = new Schema({
 	barcode: String,
 	category: String,
 	userID: String,
+	manufacturerRef: String,
+	inventoryHistory: Array,
+	lowStock: Number,
+	onOrder: Object,
 });
 
 const product = mongoose.model('Product', productSchema);

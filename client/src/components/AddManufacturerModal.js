@@ -7,13 +7,28 @@ function AddManufacturerModal({ handleOpenAddManufacturerModal, userID }) {
 		website: '',
 		contacts: [],
 		userID: userID,
+		manufacturerRef: '',
 	});
 
+	function formatManufacturerRef(name) {
+		return name.replace(/\s/g, '').toLowerCase();
+	}
+
 	function handleChange(event) {
-		setManufacturerInfo({
-			...manufacturerInfo,
-			[event.target.name]: event.target.value,
-		});
+		const value = event.target.value;
+
+		if (event.target.name === 'name') {
+			setManufacturerInfo({
+				...manufacturerInfo,
+				[event.target.name]: value,
+				manufacturerRef: formatManufacturerRef(value),
+			});
+		} else {
+			setManufacturerInfo({
+				...manufacturerInfo,
+				[event.target.name]: value,
+			});
+		}
 	}
 
 	async function handleSubmit(event) {
@@ -27,6 +42,7 @@ function AddManufacturerModal({ handleOpenAddManufacturerModal, userID }) {
 			website: '',
 			contacts: [],
 			userID: userID,
+			manufacturerRef: '',
 		});
 
 		event.target.reset();

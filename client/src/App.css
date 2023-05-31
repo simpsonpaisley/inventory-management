@@ -384,3 +384,267 @@
 	border: 1px solid #343a40;
 	border-radius: 5px;
 }
+
+.productsMain {
+	display: flex;
+}
+
+.productTable {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 1rem;
+	width: 100%;
+	min-width: 80vw;
+	background-image: url('./images/background.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+}
+
+.productRow {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #ffffff;
+	padding: 1rem;
+	width: 80vw;
+	border: 1px solid #343a40;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px #343a40;
+}
+
+.productRow:hover {
+	background-color: #e9ecef;
+}
+
+.productRowTitle {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #007bff;
+}
+
+.shortProductInfo {
+	display: flex;
+	gap: 0.5rem;
+	margin: 0.5rem;
+}
+
+.countDisplay {
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+}
+
+#tableHeader {
+	font-family: 'Oswald', sans-serif;
+	font-size: 2rem;
+	color: #007bff;
+	display: flex;
+	align-self: center;
+	margin-bottom: 1rem;
+}
+
+.modalMain {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.modalInformation {
+	max-width: 200px;
+	margin: 1rem;
+	background-color: #14daff65;
+	padding: 1rem;
+	border: 1px solid #343a40;
+	border-radius: 5px;
+}
+
+.manufacturerMain {
+	width: 100%;
+	background-image: url('./images/background.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	display: flex;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.manufacturerDisplay {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.manufacturerDisplay h2 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 3rem;
+	color: #007bff;
+	display: flex;
+	align-self: center;
+	margin-bottom: 1rem;
+}
+
+.manufacturers {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+}
+
+.manufacturerBox {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: center;
+	background-color: #ffffff;
+	border: 1px solid #343a40;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px #343a40;
+	padding: 1rem;
+}
+
+.manufacturerBoxButton {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem;
+}
+
+.manufacturerBoxButton button {
+	margin-top: 1rem;
+}
+
+.contacts {
+	margin: 1rem;
+}
+
+.manufacturerBoxExtend {
+	display: flex;
+}
+
+.productsPageMain {
+	display: flex;
+}
+
+.productDisplayBackground {
+	width: 100%;
+	background-image: url('./images/background.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.productDisplay {
+	background-color: #ffffff;
+	border: 1px solid #343a40;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px #343a40;
+	width: 80vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	margin: 1rem;
+}
+
+.productDisplay {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.productDisplay h2 {
+	font-family: 'Oswald';
+	font-size: 2rem;
+	color: #007bff;
+}
+
+.productInformation {
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.shortProductInfoPage {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.shortProductInfoPage h3 {
+	color: #007bff;
+}
+
+.supplierDisplay {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.addButton {
+	padding: 0.5rem;
+	background-color: #007bff;
+	color: #e9ecef;
+	border: none;
+	border-radius: 5px;
+	width: 150px;
+}
+
+.supplierDisplayMap button {
+	background-color: #ffffff;
+	border: none;
+	color: #007bff;
+	font-size: 1.2rem;
+}
+
+.costHistoryDisplay {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	background-color: #e9ecef;
+	padding: 1rem;
+	min-width: 25vw;
+	border: 1px solid #343a40;
+	border-radius: 5px;
+	transform: translateY(-15px);
+}
+
+.costHistory {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.cost {
+	background-color: #007bff;
+	padding: 1rem;
+	width: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+	color: #e9ecef;
+}
+
+.costHistory h4 {
+	color: #007bff;
+}

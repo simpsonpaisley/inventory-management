@@ -15,15 +15,32 @@ function AddProductModal({
 		barcode: '',
 		category: '',
 		userID: userID,
+		manufacturerRef: '',
+		inventoryHistory: [],
+		lowStock: 0,
+		stockOrdered: {},
 	});
 
 	function handleChange(event) {
-		setProductInfo({ ...productInfo, [event.target.name]: event.target.value });
+		if (event.target.name === 'manufacturer') {
+			const selectedManufacturer = userManufacturers.find(
+				(manufacturer) => manufacturer.name === event.target.value
+			);
+			setProductInfo({
+				...productInfo,
+				manufacturer: selectedManufacturer.name,
+				manufacturerRef: selectedManufacturer.manufacturerRef,
+			});
+		} else {
+			setProductInfo({
+				...productInfo,
+				[event.target.name]: event.target.value,
+			});
+		}
 	}
 
 	async function handleSubmit(event) {
 		event.preventDefault();
-		console.log(productInfo);
 		const API = process.env.REACT_APP_API + '/products';
 		await axios.post(API, productInfo);
 		setProductInfo({
@@ -36,6 +53,10 @@ function AddProductModal({
 			barcode: '',
 			category: '',
 			userID: userID,
+			manufacturerRef: '',
+			inventoryHistory: [],
+			lowStock: 0,
+			stockOrdered: {},
 		});
 		event.target.reset();
 	}
@@ -95,6 +116,15 @@ function AddProductModal({
 							type="number"
 							id="count"
 							name="count"
+							onChange={handleChange}
+							required></input>
+					</div>
+					<div className="formBlock">
+						<label htmlFor="lowStock">Low Stock Level:</label>
+						<input
+							type="number"
+							id="lowStock"
+							name="lowStock"
 							onChange={handleChange}
 							required></input>
 					</div>

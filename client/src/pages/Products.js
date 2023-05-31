@@ -4,49 +4,18 @@ import axios from 'axios';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Sidebar from '../components/Sidebar';
+import ProductsTable from '../components/ProductsTable';
 
 function Products({ userID }) {
-	const [products, setProducts] = useState([]);
-
-	useEffect(() => {
-		async function getProducts() {
-			const API = process.env.REACT_APP_API + '/products?userID=' + userID;
-
-			const response = await axios.get(API);
-			setProducts(response.data);
-		}
-		getProducts();
-	});
 	return (
 		<div className="productsPage">
 			<Header />
 			<div className="productsMain">
 				<Sidebar />
-				<div className="productTable">
-					<table>
-						<tr>
-							<th>Products</th>
-						</tr>
-						<tr>
-							<th>Name</th>
-							<th>Manufacturer</th>
-							<th>Count</th>
-							<th>Category</th>
-							<th>SKU</th>
-						</tr>
-						{products.map((product) => {
-							return (
-								<tr>
-									<td>{product.name}</td>
-									<td>{product.manufacturer}</td>
-									<td>{product.count}</td>
-									<td>{product.category}</td>
-									<td>{product.sku}</td>
-								</tr>
-							);
-						})}
-					</table>
-				</div>
+				<ProductsTable
+					userID={userID}
+					className="productTableComponent"
+				/>
 			</div>
 			<Footer />
 		</div>

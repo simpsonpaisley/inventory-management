@@ -1,11 +1,14 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useParams } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import axios from 'axios';
 import LandingPage from './pages/LandingPage';
 import Dashboard from './pages/Dashboard';
 import Products from './pages/Products';
+import Manufacturers from './pages/Manufacturers';
+import Suppliers from './pages/Suppliers';
+import ProductDisplay from './pages/ProductDisplay';
 
 function App() {
 	const { user, isLoading } = useAuth0();
@@ -39,6 +42,18 @@ function App() {
 				<Route
 					path="/products"
 					element={<Products userID={userID} />}
+				/>
+				<Route
+					path="/manufacturers"
+					element={<Manufacturers userID={userID} />}
+				/>
+				<Route
+					path="/suppliers"
+					element={<Suppliers userID={userID} />}
+				/>
+				<Route
+					path="/products/:id"
+					element={<ProductDisplay />}
 				/>
 			</Routes>
 		</div>
