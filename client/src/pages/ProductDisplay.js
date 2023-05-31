@@ -84,66 +84,68 @@ function ProductDisplay() {
 							</div>
 							<div className="supplierDisplay">
 								<h3>Suppliers</h3>
-								{suppliers.map((supplier) => (
-									<div className="supplierDisplayMap">
-										<h4>{supplier.name}</h4>
-										<button onClick={() => getContacts(supplier)}>
-											View Contacts
-										</button>
-										{supplier.showContacts && (
-											<div className="supplierContacts">
-												{supplier.supplierContacts.map((contact) => (
-													<div className="supplierContact">
-														<h5>{contact.name}</h5>
-														<a href={'mailto:${contact.email}'}>
-															{contact.email}
-														</a>
-													</div>
-												))}
-											</div>
-										)}
-									</div>
-								))}
+								{suppliers &&
+									suppliers.map((supplier) => (
+										<div className="supplierDisplayMap">
+											<h4>{supplier.name}</h4>
+											<button onClick={() => getContacts(supplier)}>
+												View Contacts
+											</button>
+											{supplier.showContacts && (
+												<div className="supplierContacts">
+													{supplier.supplierContacts.map((contact) => (
+														<div className="supplierContact">
+															<h5>{contact.name}</h5>
+															<a href={'mailto:${contact.email}'}>
+																{contact.email}
+															</a>
+														</div>
+													))}
+												</div>
+											)}
+										</div>
+									))}
 								<button
 									className="addButton"
 									onClick={addSupplier}>
 									{' '}
 									+ Add Supplier
 								</button>
-								{showAddSupplier && (
-									<AddProductSupplier
-										userSuppliers={userSuppliers}
-										addSupplier={addSupplier}
-										productData={productData}
-									/>
-								)}
 							</div>
 
 							<div className="costHistoryDisplay">
 								<h3>Price History</h3>
-								{costHistory
-									.slice(0)
-									.reverse()
-									.map((cost) => (
-										<div class="costHistory">
-											<h4>{cost.supplier}</h4>
-											<p>{cost.date} </p>
-											<p className="cost">£{cost.cost}</p>
-										</div>
-									))}
+								{costHistory &&
+									costHistory
+										.slice(0)
+										.reverse()
+										.map((cost) => (
+											<div class="costHistory">
+												<h4>{cost.supplier}</h4>
+												<p>{cost.date} </p>
+												<p className="cost">£{cost.cost}</p>
+											</div>
+										))}
 								<button
 									className="addButton"
 									onClick={handleAddCost}>
 									Add Price
 								</button>
-								{showAddCost && (
-									<AddCost
-										handleAddCost={handleAddCost}
-										productData={productData}
-									/>
-								)}
 							</div>
 						</div>
+						{showAddCost && (
+							<AddCost
+								handleAddCost={handleAddCost}
+								productData={productData}
+							/>
+						)}
+						{showAddSupplier && (
+							<AddProductSupplier
+								userSuppliers={userSuppliers}
+								addSupplier={addSupplier}
+								productData={productData}
+							/>
+						)}
 					</div>
 				</div>
 			</div>

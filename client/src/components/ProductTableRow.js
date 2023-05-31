@@ -8,10 +8,10 @@ function ProductTableRow({ product }) {
 	useEffect(() => {
 		if (product.count <= product.lowStock) {
 			setCountColour({ backgroundColor: '#c0392b' });
-			setOnOrder(product.onOrder);
+			setOnOrder(product.onOrder || {});
 		} else if (product.count > product.lowStock) {
 			setCountColour({ backgroundColor: '#14daff' });
-			setOnOrder(product.onOrder);
+			setOnOrder(product.onOrder || {});
 		}
 	}, []);
 

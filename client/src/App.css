@@ -385,6 +385,10 @@
 	border-radius: 5px;
 }
 
+.productsPage {
+	min-height: 100vh;
+}
+
 .productsMain {
 	display: flex;
 }
@@ -401,6 +405,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: scroll;
+	margin-bottom: 1rem;
 }
 
 .productRow {
